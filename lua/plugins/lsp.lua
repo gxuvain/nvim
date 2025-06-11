@@ -17,6 +17,14 @@ return {
     config = function()
         local autoformat_filetypes = {
             "lua",
+            "html",
+            "css",
+            "javascript",
+            "typescript",
+            "python",
+            "rust",
+            "go",
+            "ocaml",
         }
         -- Create a keymap for vim.lsp.buf.implementation
         vim.api.nvim_create_autocmd('LspAttach', {
@@ -101,6 +109,13 @@ return {
         require('mason-lspconfig').setup({
             ensure_installed = {
                 "lua_ls",
+                "tsserver", -- JavaScript/TypeScript
+                "html", -- HTML
+                "cssls", -- CSS
+                "pyright", -- Python
+                "rust_analyzer", -- Rust
+                "gopls", -- Go
+                "ocamllsp", -- OCaml
             },
             handlers = {
                 -- this first function is the "default handler"

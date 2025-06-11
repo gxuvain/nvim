@@ -5,8 +5,10 @@ return {
         config = function()
             require('lualine').setup {
                 options = {
-                    section_separators = { left = '', right = '' },
-                    component_separators = { left = '', right = '|' }
+                    icons_enabled = false,
+                    theme = "auto",
+                    section_separators = '',
+                    component_separators = '::'
                 } }
         end
     }
